@@ -8,7 +8,7 @@ To be able to use this package you can clone using the following commands:
     $ cd catkin_ws
     $ mkdir -p src
     $ cd src
-    $ git clone https://github.com/Baraaalsaleh/MEC319.git
+    $ git clone https://github.com/Baraaalsaleh/MEC319
     $ cd ..
     $ rosdep update
     $ rosdep install --from-paths src --ignore-src --rosdistro=melodic -y
