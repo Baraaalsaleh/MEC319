@@ -1,0 +1,22 @@
+<launch>
+
+  <!--Gazebo empty world launch file-->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--<arg name="world_name" value="$(find my_robot)/world/world.world"/> --> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/> <!-- Inert - see gazebo_ros_pkgs issue #491 -->
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <!--Robot Description from URDF-->
+  <param name="fliessband" command="$(find xacro)/xacro --inorder $(find my_robot)/urdf/test_fliessband.urdf.xacro"/>
+  <param name="use_gui" value="true"/>
+
+  <!--Nodes-->
+
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param fliessband -model fliessband" output="screen"/>
+
+
+</launch>
