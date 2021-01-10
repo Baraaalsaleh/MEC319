@@ -4,8 +4,10 @@ Gruppe 11 - Pick &amp; Place UR3 Mit ROS
 
 To be able to use this package you can clone using the following commands:
 
-    $ mkdir -p catkin_ws & cd catkin_ws
-    $ mkdir -p src & cd src
+    $ mkdir -p catkin_ws
+    $ cd catkin_ws
+    $ mkdir -p src
+    $ cd src
     $ git clone https://github.com/Baraaalsaleh/MEC319.git
     $ cd ..
     $ rosdep update
