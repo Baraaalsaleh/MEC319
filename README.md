@@ -55,9 +55,13 @@ You can start the ur10_moveit_planning_execution.launch now:
 
     $ roslaunch test_moveit_config ur10_moveit_planning_execution.launch
 
+You can now run the python script to move the robot after making the file ur10_pick.py executable:
+
+    $ chmod +x src/MEC319/picking/src/ur10_pick.py
+
 To start moving the robot you can test the script "ur10_pick.py":
 
-    $rosrun picking ur10_pick.py
+    $ rosrun picking ur10_pick.py
 
 Have fun
 
