@@ -31,14 +31,17 @@ you can now launch objects using the following command:
   
     $ roslaunch my_robot objects.launch
 
-To be able to use the classifier node "locate_classify_objects.py" you need now to change the path for the "model10.h5" file to the right path on your local machine.
+To be able to use the classifier node "locate_classify_objects.py" you need now to change the path for the "model10.h5" file to the right path on your local machine. You need then to make it an executable using the following command:
+
+    $ chmod +x src/MEC319/my_robot/src/scripts/locate_classify_objects.py
+
 Now run the following commands in a different terminal to start the object classifier:
   
     $ rosrun my_robot locate_classify_objects.py
 
 You can start the robot now using:
  
-    $ roslaunch ur10_with_gripper.launch
+    $ roslaunch fh_desc ur10_with_gripper.launch
 
 You can start the ur10_moveit_planning_execution.launch now:
 
