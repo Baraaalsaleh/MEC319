@@ -13,9 +13,9 @@ To be able to use this package you can clone using the following commands:
     $ rosdep update
     $ rosdep install --from-paths src --ignore-src --rosdistro=melodic -y
     
-Making the package using catkin_make:
+Making the package using catkin build:
 
-    $ catkin_make
+    $ catkin build
 
 Source the current directory:
 
