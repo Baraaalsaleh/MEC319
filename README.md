@@ -53,7 +53,7 @@ You can start the robot now using:
 
 You can start the ur10_moveit_planning_execution.launch now:
 
-    $ roslaunch test_moveit_config ur3_moveit_planning_execution.launch
+    $ roslaunch test_moveit_config ur10_moveit_planning_execution.launch
 
 To start moving the robot you can test the script "ur10_pick.py":
 
