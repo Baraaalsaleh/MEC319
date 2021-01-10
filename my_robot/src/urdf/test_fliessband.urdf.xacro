@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+<robot name="fliessband">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-2 2 0" rpy="0.0 0.0 0.0"/>
+            <mass value="1000"/>
+            <inertia ixx="166.667" ixy="0.0" ixz="0.0" iyy="166.667" iyz="0.0" izz="166.667"/>
+        </inertial>
+        <visual name="">
+            <origin xyz="-2 2 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="3 1.2 0.5"/>
+            </geometry>
+            <material name="">
+                <color rgba="1.0 1.0 1.0 1.0"/>
+                <texture filename=""/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-2 2 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="3 1.2 0.5"/>
+            </geometry>
+        </collision>
+ 
+    </link>
+      <gazebo reference="base_link">
+       <material>Gazebo/White</material>
+      </gazebo>
+<link name="Cylinder_1">
+        <inertial>
+          <origin xyz="-1.95 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-1.95 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-1.95 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_1">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_2">
+        <inertial>
+          <origin xyz="-1.7489999999999999 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-1.7489999999999999 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-1.7489999999999999 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_2">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_3">
+        <inertial>
+          <origin xyz="-1.548 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-1.548 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-1.548 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_3">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_4">
+        <inertial>
+          <origin xyz="-1.347 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-1.347 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-1.347 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_4">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_5">
+        <inertial>
+          <origin xyz="-1.146 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-1.146 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-1.146 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_5">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_6">
+        <inertial>
+          <origin xyz="-0.9449999999999998 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-0.9449999999999998 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-0.9449999999999998 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_6">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_7">
+        <inertial>
+          <origin xyz="-0.744 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-0.744 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-0.744 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_7">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_8">
+        <inertial>
+          <origin xyz="-0.5429999999999999 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-0.5429999999999999 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-0.5429999999999999 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_8">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_9">
+        <inertial>
+          <origin xyz="-0.34199999999999986 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-0.34199999999999986 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-0.34199999999999986 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_9">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_10">
+        <inertial>
+          <origin xyz="-0.1409999999999998 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="-0.1409999999999998 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="-0.1409999999999998 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_10">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_11">
+        <inertial>
+          <origin xyz="0.060000000000000275 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="0.060000000000000275 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="0.060000000000000275 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_11">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_12">
+        <inertial>
+          <origin xyz="0.26100000000000034 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="0.26100000000000034 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="0.26100000000000034 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_12">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_13">
+        <inertial>
+          <origin xyz="0.46199999999999997 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="0.46199999999999997 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="0.46199999999999997 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_13">
+       <material>Gazebo/Black</material>
+      </gazebo>
+<link name="Cylinder_14">
+        <inertial>
+          <origin xyz="0.663 2 0.65" />
+          <mass value="0.1" />
+          <inertia  ixx="0.01667" ixy="0.0"  ixz="0.0"  iyy="0.01667"  iyz="0.0"  izz="0.01667" />
+        </inertial>
+        <visual>
+          <origin xyz="0.663 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+         <material name="">
+                <color rgba="0.0 0.0 0.0 1.0"/>
+                <texture filename=""/>
+            </material>
+       </visual>
+       <collision>
+         <origin xyz="0.663 2 0.65" />
+         <geometry>
+           <cylinder length="1" radius="0.1"/>
+         </geometry>
+       </collision>
+     </link>
+     <gazebo reference="Cylinder_14">
+       <material>Gazebo/Black</material>
+      </gazebo>
+ <joint name="1_First_Joint" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_1"/>
+     </joint>
+ <joint name="Revulate_2" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_2"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Main_Transmission">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_2" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_3" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_3"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_31">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_3" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_4" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_4"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_32">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_4" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_5" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_5"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_33">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_5" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_6" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_6"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_34">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_6" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_7" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_7"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_35">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_7" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_8" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_8"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_36">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_8" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_9" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_9"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_37">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_9" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_10" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_10"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_38">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_10" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_11" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_11"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_39">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_11" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_12" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_12"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_40">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_12" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_13" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_13"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_41">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_13" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+ <joint name="Revulate_14" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="-1" lower="-10000000000" upper="10000000000" velocity="-1.0"/>
+        <origin rpy="0 1.570796 0" xyz="0.0 0.0 0"/>
+        <parent link="base_link"/>
+        <child link="Cylinder_14"/>
+     </joint>
+<transmission type="SimpleTransmission" name="Transmission_42">
+      <actuator name="Cylinder_1" />
+      <joint name="Revulate_14" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+  </robot>
