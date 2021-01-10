@@ -1,0 +1,13 @@
+material class_0_material{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture 0.png
+                scale 1 1
+            }
+        }   
+    }
+}
