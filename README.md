@@ -39,6 +39,14 @@ Now run the following commands in a different terminal to start the object class
   
     $ rosrun my_robot locate_classify_objects.py
 
+Note: You need to have the following python libraries installed in order for the classifiert to work; numpy, tensorflow 1.14.0 or tensorflow-gpu 1.14.0, keras 2.3.1, openCV. This can be done using the following pip commands:
+    
+    $ pip install numpy
+    $ pip install opencv-contrib-python
+    $ pip install tensorflow==1.14.0
+    $ pip install keras==2.3.1
+    $ pip install tensorflow-gpu=1.14.0
+
 You can start the robot now using:
  
     $ roslaunch fh_desc ur10_with_gripper.launch
