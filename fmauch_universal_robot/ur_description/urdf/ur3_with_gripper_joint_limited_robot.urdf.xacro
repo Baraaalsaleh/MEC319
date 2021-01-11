@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro"
+       name="ur3" >
+
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
+  <xacro:arg name="grasp_plugin" default="true" />
+  <xacro:arg name="peg_shape" default="cylinder" />
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+  <!-- ur3 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur3.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:arg name="kinematics_config" default="$(find ur_description)/config/ur3_default.yaml"/>
+  <xacro:ur3_robot prefix="" joint_limited="true"
+    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
+    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
+    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
+    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
+    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
+    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
+    transmission_hw_interface="$(arg transmission_hw_interface)"
+    kinematics_file="${load_yaml('$(arg kinematics_config)')}"
+  />
+
+  <link name="robotiq_coupler">
+    <visual>
+      <geometry>
+        <mesh filename="package://ur_description/meshes/gripper/$(arg peg_shape)_gripper.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://ur_description/meshes/gripper/$(arg peg_shape)_gripper.dae" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0   0  0" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="1" ixy="0" ixz="0" 
+               iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <joint name="robotiq_coupler_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="${-pi/2.0} 0 0" />
+    <parent link="tool0"/>
+    <child link="robotiq_coupler"/>
+  </joint>
+  <gazebo reference="robotiq_coupler">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+    <material>Gazebo/Bricks</material>
+  </gazebo>
+
+  <!-- Equivalent to the OpenRAVE manipulator denso_robotiq_85_gripper -->
+  <link name="ur3_robotiq_85_gripper" />
+  <joint name="manipulator_dummy_joint" type="fixed">
+    <origin xyz="0 0 0.1441" rpy="0 0 0" />
+    <parent link="robotiq_coupler"/>
+    <child link="ur3_robotiq_85_gripper"/>
+  </joint>
+    
+  <!-- Attach the robotiq 85 gripper -->
+  <!-- <xacro:robotiq_85_gripper prefix="" parent="gripper_coupler" >
+    <origin xyz="0 0 0.004" rpy="0 ${-pi/2} ${pi}"/>
+  </xacro:robotiq_85_gripper>  -->
+  
+  <!-- Gazebo FT sensor plugin -->
+  <gazebo reference="wrist_3_link-tool0_fixed_joint">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <gazebo>
+    <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+      <updateRate>100.0</updateRate>
+      <topicName>ft_sensor/raw</topicName>
+      <gaussianNoise>0.0</gaussianNoise>
+      <jointName>wrist_3_link-tool0_fixed_joint</jointName>
+    </plugin>
+  </gazebo>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>
