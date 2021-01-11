@@ -1,5 +1,5 @@
 # MEC319
-Gruppe 11 - Pick &amp; Place UR3 Mit ROS
+Gruppe 6 - Pick &amp; Place UR3 Mit ROS
 
 
 To be able to use this package you can clone using the following commands:
