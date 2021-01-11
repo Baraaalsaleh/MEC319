@@ -63,5 +63,18 @@ To start moving the robot you can test the script "ur10_pick.py":
 
     $ rosrun picking ur10_pick.py
 
+You can also try UR3 with different gripper:
+
+    $ roslaunch ur_gazebo ur3_with_gripper.launch
+    $ roslaunch test_with_gripper_moveit_config ur3_with_gripper_moveit_planning_execution.launch
+
+Then to be able to move the robot you need to make the node "test_hand_arm.py" executable:
+    
+    $ chmod +x src/MEC319/picking/src/test_hand_arm.py
+
+Now you can run the script:
+
+    $ rosrun picking test_hand_arm.py
+    
 Have fun
 
