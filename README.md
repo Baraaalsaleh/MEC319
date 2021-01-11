@@ -24,7 +24,11 @@ Source the current directory:
 To test the repository:
     
     $ roslaunch my_robot mybot.launch
-    
+
+You should get something like this:
+
+
+
 Optional after launching the previous file successfully, you can change start move the conveyor belt by changing the velocity of the joint "movable" of the conveyor belt (wait a little bit until the belt gain speed)
 
 you can now launch objects using the following command:
@@ -63,9 +67,10 @@ To start moving the robot you can test the script "ur10_pick.py":
 
     $ rosrun picking ur10_pick.py
 
-You can also try UR3 with different gripper:
+You can also try UR3 with different gripper (note: stop ur10 from the terminal or just restart the simulation using the command in line 26. If you want to use both robots at the same time, you need to change the names of the controllers):
 
     $ roslaunch ur_gazebo ur3_with_gripper.launch
+    
     $ roslaunch test_with_gripper_moveit_config ur3_with_gripper_moveit_planning_execution.launch
 
 Then to be able to move the robot you need to make the node "test_hand_arm.py" executable:
