@@ -1,0 +1,14 @@
+<launch>
+
+  <!--Gazebo empty world launch file-->
+
+  <!--Robot Description from URDF-->
+  <param name="test_object" command="$(find xacro)/xacro --inorder $(find my_robot)/urdf/test_object.urdf.xacro"/>
+  <param name="use_gui" value="true"/>
+
+  <!--Nodes-->
+
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param test_object -model test_object -x -0.12 -y 1.45 -z 0.58" output="screen"/>
+
+
+</launch>
