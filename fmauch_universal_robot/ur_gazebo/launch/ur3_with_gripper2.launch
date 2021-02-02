@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="false" doc="If true, limits joint range [-PI, PI] on all joints." />
+  <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
+
+
+  <!-- startup simulated world -->
+
+
+  <!-- send robot urdf to param server -->
+  <include file="$(find ur_description)/launch/ur3_with_gripper_upload.launch">
+    <arg name="limited" value="$(arg limited)"/>
+  </include>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -y 1.9 -z 0.63 -Y -1.5708" respawn="false" output="screen" />
+
+  <include file="$(find ur_gazebo)/launch/controller_utils.launch"/>
+
+  <!-- start this controllers -->
+  <rosparam file="$(find ur_gazebo)/controller/arm_controller_ur3.yaml" command="load"/>
+  <node name="hand_controller_spawner2" pkg="controller_manager" type="controller_manager" args="spawn gripper_controller" respawn="false" output="screen"/>
+  <node name="arm_controller_spawner1" pkg="controller_manager" type="controller_manager" args="spawn arm_controller" respawn="false" output="screen"/>
+  <node name="ros_control_controller_manager1" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load joint_group_position_controller" />
+  <node name="ros_control_controller_manager2" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load hand_joint_group_position_controller" />
+  
+  <!--node name="ros_control_controller_manager2" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="load hand_joint_group_position_controller" /-->
+  
+
+  <!--node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/-->
+  <node name="rviz1" pkg="rviz" type="rviz" args="-d $(find my_robot)/rviz/mybot.rviz" required="true"/>
+  
+ 
+</launch>
