@@ -5,6 +5,7 @@ import rospy
 import moveit_commander
 import moveit_msgs.msg
 import geometry_msgs.msg
+import time
 from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
@@ -20,25 +21,28 @@ def prepare_pose(goal_pose):
     pose.orientation.z = goal_pose.orientation.z
 
 kasten_angles = [(-pi/2)-(pi/12), (-pi/2)-(3*pi/12), (-pi/2)-(5*pi/12), (pi/2)+(5*pi/12), (pi/2)+(3*pi/12), (pi/2)+(pi/12)]
-ready_to_pick = [0, -0.7, 1.1, -(pi/2)-0.4, 3*(pi/2), pi/2, 0]
-
-ready_to_pick_2 = [0.25, 0.18, 0.0, -0.18, pi, 0.0, 0.0]
+ready_to_pick = [0, -0.7, 1.1, -(pi/2)-0.45, 3*(pi/2), 0, 0.7]
+ready_to_pick_1 = [0, -1.1, 1.1, -(pi/2), 3*(pi/2), 0, 0]
+ready_to_pick_2 = [0.0, 0.18, 0.0, -0.18, pi, 0.0, 0.0]
 
 
 def ready(moveit_group):
     joint_goal = moveit_group.get_current_joint_values()
-    joint_goal[0] = 0.25
+    #joint_goal[0] = +0.35
     joint_goal[1] = -pi/2
     moveit_group.go(joint_goal, wait=True)
     moveit_group.go(ready_to_pick, wait=True)
+    #moveit_group.go(ready_to_pick_1, wait=True)
     #moveit_group.go(ready_to_pick_2, wait=True)
 
 def pick(moveit_group ,size_in_cm):
-    #joint_goal = moveit_group.get_current_joint_values()
-    #joint_goal[0] = -0.25
-    #moveit_group.go(joint_goal, wait=True)
     joint_goal = moveit_group.get_current_joint_values()
-    joint_goal[6] = 0.35#0.8-(0.0655*size_in_cm) #0.4
+    #joint_goal[0] = -0.25
+    joint_goal[6] = 0.8-(0.0655*size_in_cm) #0.4
+    #eef_link = moveit_group.get_end_effector_link()
+    #print(eef_link)
+    #scene.attach_box(eef_link, "redBox1", touch_links=touch_links)
+
     moveit_group.go(joint_goal, wait=True)
 
 def hold_up(moveit_group):
@@ -72,18 +76,25 @@ robot = moveit_commander.RobotCommander()
 
 arm_group = moveit_commander.MoveGroupCommander("hand_arm")
 
-#ready(arm_group)
+#scene = moveit_commander.PlanningSceneInterface()
+
+#touch_links = robot.get_link_names(group=arm_group)
+
+#print(touch_links)
+#i = 0
+#while i < 20:
+#    ready(arm_group)
+#    i += 1
+
+
+ready(arm_group)
 #joint_goal = arm_group.get_current_joint_values()
 #print(joint_goal)
-#pick(arm_group, 2.0)
-hold_up(arm_group)
+#pick(arm_group, 5.0)
+#time.sleep(0.5)
+#hold_up(arm_group)
 #place(arm_group, 3)
-"""
-while True:
-    ready(arm_group)
-    pick(arm_group, 2.0)
-    place(arm_group, 3)
-"""
+
 ##Joints: 
 # 0 = shoulder_pan_joint
 # 1 = shoulder_lift_joint
