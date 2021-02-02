@@ -37,11 +37,11 @@ you can now launch objects using the following command:
 
 To be able to use the classifier node "locate_classify_objects.py" you need now to change the path for the "model10.h5" file to the right path on your local machine. You need then to make it an executable using the following command:
 
-    $ chmod +x src/MEC319/my_robot/src/scripts/locate_classify_objects.py
+    $ chmod +x src/MEC319/my_robot/src/scripts/classifier.py
 
 Now run the following commands in a different terminal to start the object classifier:
   
-    $ rosrun my_robot locate_classify_objects.py
+    $ rosrun my_robot classifier.py
 
 Note: You need to have the following python libraries installed in order for the classifiert to work; numpy, tensorflow 1.14.0 or tensorflow-gpu 1.14.0, keras 2.3.1, openCV. This can be done using the following pip commands:
     
@@ -75,11 +75,11 @@ You can also try UR3 with different gripper (note: stop ur10 from the terminal o
 
 Then to be able to move the robot you need to make the node "test_hand_arm.py" executable:
     
-    $ chmod +x src/MEC319/picking/src/test_hand_arm.py
+    $ chmod +x src/MEC319/my_robot/src/scripts/pick_and_place.py
 
-Now you can run the script:
+Now you can run the controller node:
 
-    $ rosrun picking test_hand_arm.py
+    $ rosrun my_robot pick_and_place.py
     
 Have fun
 
