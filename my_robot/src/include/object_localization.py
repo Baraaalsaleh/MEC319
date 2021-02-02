@@ -159,7 +159,7 @@ def locate_object(img, threshold=100, set_value=240, color = (200,200,255), extr
 
     return result_img, processed_img, im_with_keypoints, object_part, center_coordinates, object_size
 
-def get_real_coordinates(keypoint_coordinates, object_size_in_px, img_size, fliessband_hight=0.65, camera_coordinates=(-3, 1.5, 1.5), camera_horizontal_fov=1.1):
+def get_real_coordinates(keypoint_coordinates, object_size_in_px, img_size, fliessband_hight=0.61, camera_coordinates=(-3, 1.5, 1.5), camera_horizontal_fov=1.1):
     
     pixel_size_x = camera_horizontal_fov/img_size[1]
     pixel_size_y = camera_horizontal_fov/img_size[0]
@@ -189,14 +189,16 @@ def classify(img, model, img_shape=(-1, 32, 32, 3)):
     image = image/255.0
     image = image.reshape(img_shape)
 
-    #my_prediction = np.array(model.predict([image]))
-    object_class_nummer = model.predict_classes(image)
+    my_prediction = np.array(model.predict([image]))
+    #object_class_nummer = model.predict_classes(image)
 
     toc = time.time()
     #print("classify dauert: " + str(toc - tic))
 
-    #my_prediction = np.amax(my_prediction)
-    return object_class_nummer
+    object_class_nummer = np.argmax(my_prediction)
+    #print(object_class_nummer)
+    return [object_class_nummer]
+    #return object_class_nummer
 
 
 
