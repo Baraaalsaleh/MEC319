@@ -1,5 +1,5 @@
-# MEC319
-Gruppe 6 - Pick &amp; Place UR3 Mit ROS
+# TAU - MEC319: Mechatronic Project
+Gruppe 6 - Pick &amp; Place with UR3 in ROS
 
 
 To be able to use this package you can clone using the following commands:
