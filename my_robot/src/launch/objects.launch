@@ -3,7 +3,7 @@
   <!--Gazebo empty world launch file-->
 
   <!--Robot Description from URDF-->
-  <param name="objects" command="$(find xacro)/xacro --inorder $(find my_robot)/urdf/objects.urdf.xacro"/>
+  <param name="objects" command="$(find xacro)/xacro --inorder $(find my_robot)/urdf/objects_new.urdf.xacro"/>
   
   <param name="use_gui" value="true"/>
 
