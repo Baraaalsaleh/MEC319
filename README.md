@@ -1,4 +1,5 @@
-# TAU - MEC319: Mechatronic Project
+# Turkish - German University
+# MEC319: Mechatronic Project
 Gruppe 6 - Pick &amp; Place with UR3 in ROS
 
 
