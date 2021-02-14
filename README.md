@@ -86,8 +86,8 @@ Have fun
 
 The used packages in this projects:
 
-    fmauch_universal_robots:	https://github.com/UniversalRobots/Universal_Robots_ROS_Driver
+- fmauch_universal_robots:	https://github.com/UniversalRobots/Universal_Robots_ROS_Driver
 
-    smart_grasping_sandbox:		https://github.com/shadow-robot/smart_grasping_sandbox
+- smart_grasping_sandbox:	https://github.com/shadow-robot/smart_grasping_sandbox
 
-    robotiq:		        https://github.com/cambel/ur3
+- robotiq:		           https://github.com/cambel/ur3
