@@ -1,4 +1,4 @@
-# Turkish - German University
+# The Turkish - German University - TGU
 # MEC319: Mechatronic Project
 Gruppe 6 - Pick &amp; Place with UR3 in ROS
 
@@ -90,4 +90,4 @@ The used packages in this projects:
 
     smart_grasping_sandbox:		https://github.com/shadow-robot/smart_grasping_sandbox
 
-    robotiq:		        	https://github.com/cambel/ur3
+    robotiq:		        https://github.com/cambel/ur3
