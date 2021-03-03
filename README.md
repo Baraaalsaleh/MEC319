@@ -1,6 +1,9 @@
 # The Turkish - German University - TGU
 # MEC319: Mechatronic Project
 Gruppe 6 - Pick &amp; Place with UR3 in ROS
+Berk KAÇKA
+Baraa AL SALEH
+Noor Aldin AL FARES
 
 
 To be able to use this package you can clone using the following commands:
